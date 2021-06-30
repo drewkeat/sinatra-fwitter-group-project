@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
-    post '/users' do
-        binding.pry
+    get '/users/:id' do
+       @user = current_user
+        erb :'users/show'
     end
 
 end
